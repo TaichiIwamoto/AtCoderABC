@@ -15,6 +15,8 @@ int main()
 #include <cmath>
 #include <cstring>
 #include <algorithm>
+#include <any>
+#include <sstream>
 using namespace std;
 template <class T>
 //2つの要素の最大値
@@ -36,7 +38,7 @@ bool chmin(T& a, const T& b) {
 
 //vectorの要素文標準入力する
 template <class T>
-void tmpCin(vector<T>& vec) {
+void fixedCin(vector<T>& vec) {
 	for (int i = 0; i < (int)vec.size(); i++) {
 		cin >> vec.at(i);
 	}
@@ -61,6 +63,13 @@ bool isPalindrome(T str) {
 	}
 	return true;
 }
-
+//vectorの標準出力
+template <class T>
+void vectorLog(const T& vec) {
+	for (const auto& tmp : vec) {
+		cout << tmp << " ";
+	}
+	cout << endl;
+}
 
 #endif //INCLUDED_MAINN
